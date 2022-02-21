@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "620f9f562d50fd5f5ec4b3fc"
+  },
+  "login": "admin",
+  "mdp": "admin",
+  "role": "Alchimiste"
+},{
+  "_id": {
+    "$oid": "620fd42e1870ce5679fdaac7"
+  },
+  "login": "test1",
+  "mdp": "mdp",
+  "role": "Guerrier"
+},{
+  "_id": {
+    "$oid": "620fe57c9db2c66fc6d59cdd"
+  },
+  "login": "z",
+  "mdp": "z",
+  "role": "Enchanteur"
+},{
+  "_id": {
+    "$oid": "621357375152a382782f85a2"
+  },
+  "login": "t1",
+  "mdp": "t1",
+  "role": "Guerrier"
+},{
+  "_id": {
+    "$oid": "621359095152a382782f85a3"
+  },
+  "login": "t2",
+  "mdp": "t2",
+  "role": "Alchimiste"
+}]
