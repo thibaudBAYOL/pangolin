@@ -1,0 +1,18 @@
+<p>inscription works!</p>
+<form id="inscription" #f="ngForm" (ngSubmit)="onSubmitInscription(f)" >
+    <p>Inscription</p>
+    <p>Login:</p>
+    <input name="login" ngModel required >
+    <p>mot de passe:</p>
+    <input type="password" name="mdp" ngModel required>
+    <p>role:</p>
+    <select name="role" ngModel required>
+        <option value="Guerrier">Guerrier</option>
+        <option value="Alchimiste">Alchimiste</option>
+        <option value="Sorcier">Sorcier</option>
+        <option value="Espions">Espions</option>
+        <option value="Enchanteur">Enchanteur</option>
+    </select>
+    <button >OK</button>
+</form>
+<p>{{message}}</p>

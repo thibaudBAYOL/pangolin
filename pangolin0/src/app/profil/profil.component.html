@@ -1,0 +1,20 @@
+<p>Bonjour {{login}}</p>
+<p>profil works!</p>
+<form id="role" #f0="ngForm" (ngSubmit)="onSubmitprofil_role(f0)" >
+    <p>changer le role {{role}} pour :</p>
+    <select name="role" ngModel required>
+        <option value="Guerrier">Guerrier</option>
+        <option value="Alchimiste">Alchimiste</option>
+        <option value="Sorcier">Sorcier</option>
+        <option value="Espions">Espions</option>
+        <option value="Enchanteur">Enchanteur</option>
+    </select>
+    <button >OK</button>
+</form>
+<p>{{message_role}}</p>
+<form id="mdp" #f="ngForm" (ngSubmit)="onSubmitprofil_mdp(f)" >
+    <p>changer de mot de passe ? :</p>
+    <input type="password" name="mdp" ngModel required>
+    <button >OK</button>
+</form>
+<p>{{message_mdp}}</p>

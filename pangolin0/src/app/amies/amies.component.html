@@ -1,0 +1,24 @@
+<p>amies works!</p>
+<h2>Liste d'utilisateur(s)</h2>
+<ul>
+    <li *ngFor="let user of liste_users">{{user.login}} / {{user.role}}</li>
+</ul>
+<form  #f0="ngForm" (ngSubmit)="onSubmitAmie(f0)" >
+    <p>ajouter un amie</p>
+    <select name="amie" ngModel required>
+        <option *ngFor="let amie1 of liste_users" value={{amie1.login}}>{{amie1.login}} / {{amie1.role}}</option>
+    </select>
+    <button >OK</button>
+</form>
+<form  #f1="ngForm" (ngSubmit)="supAmie(f1)" >
+    <p>suprimer un amie</p>
+    
+    <select name="amie" ngModel required>
+        <option *ngFor="let amie0 of liste_amies" value={{amie0}}>{{amie0}}</option>
+    </select>
+    <button >OK</button>
+</form>
+<h2>Liste d'amie(s)</h2>
+<ul>
+    <li *ngFor="let amie of liste_amies">{{amie}} </li>
+</ul>
