@@ -6,10 +6,32 @@
 <form  #f0="ngForm" (ngSubmit)="onSubmitAmie(f0)" >
     <p>ajouter un amie</p>
     <select name="amie" ngModel required>
-        <option *ngFor="let amie1 of liste_users" value={{amie1.login}}>{{amie1.login}} / {{amie1.role}}</option>
+                                    <!--add-->
+        <option *ngFor="let amie1 of liste_pas_amie" value={{amie1.login}}>{{amie1.login}} / {{amie1.role}}</option>
     </select>
     <button >OK</button>
 </form>
+<button onclick="document.getElementById('inscription_amie').hidden=!document.getElementById('inscription_amie').hidden;">inscription_amie</button>
+<form id="inscription_amie" #f="ngForm" (ngSubmit)="onSubmitInscription_amie(f)" hidden>
+    <p>Inscription</p>
+    <p>Login:</p>
+    <input name="login" ngModel required >
+    <p>mot de passe:</p>
+    <input type="password" name="mdp" ngModel required>
+    <p>role:</p>
+    <select name="role" ngModel required>
+        <option value="Guerrier">Guerrier</option>
+        <option value="Alchimiste">Alchimiste</option>
+        <option value="Sorcier">Sorcier</option>
+        <option value="Espions">Espions</option>
+        <option value="Enchanteur">Enchanteur</option>
+    </select>
+    <button >OK</button>
+</form>
+<p>{{message}}</p>
+
+
+
 <form  #f1="ngForm" (ngSubmit)="supAmie(f1)" >
     <p>suprimer un amie</p>
     

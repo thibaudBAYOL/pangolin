@@ -16,10 +16,12 @@ export class ProfilComponent implements OnInit {
   login: String = null;
   constructor(private service: OrdredbService, private router: Router) {
     this.login = sessionStorage.getItem('login');
-    if (this.login == "null") {
+                                // add
+    if (this.login == "null" || this.login == null) {
       this.router.navigate(['/login']);
 
     } else {
+      console.log(this.login);
       this.maj();
     }
   }
